@@ -1,2 +1,2 @@
-# scss-helpers-text-transform
-Scss | Helpers - Text transform
+# Scss | Helpers - Text transform
+
