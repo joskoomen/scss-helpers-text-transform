@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+$helpers-text-transform-class-prefix: 'txt-t' !default;
+
+@mixin -typography-text-transforms($prefix:'') {
+  .#{$prefix}#{$helpers-text-transform-class-prefix}-lc {
+    text-transform: lowercase;
+  }
+  .#{$prefix}#{$helpers-text-transform-class-prefix}-uc {
+    text-transform: uppercase;
+  }
+  .#{$prefix}#{$helpers-text-transform-class-prefix}-cc {
+    text-transform: capitalize;
+  }
+  .#{$prefix}#{$helpers-text-transform-class-prefix}-fl-uc {
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+}
+
+@mixin helpers-text-transforms($responsive : false) {
+  @if $responsive {
+    @each $classname in $breakpoint-classes {
+      @include breakpoint($classname) {
+        @include -typography-text-transforms('#{$classname}-');
+      }
+    }
+  } @else {
+    @include -typography-text-transforms();
+  }
+}
