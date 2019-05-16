@@ -2,7 +2,7 @@
 
 $helpers-text-transform-class-prefix: 'txt-t' !default;
 
-@mixin -typography-text-transforms($prefix:'') {
+@mixin -typography-text-transform($prefix:'') {
   .#{$prefix}#{$helpers-text-transform-class-prefix}-lc {
     text-transform: lowercase;
   }
@@ -19,14 +19,14 @@ $helpers-text-transform-class-prefix: 'txt-t' !default;
   }
 }
 
-@mixin helpers-text-transforms($responsive : false) {
+@mixin helpers-text-transform($responsive : false) {
   @if $responsive {
     @each $classname in $breakpoint-classes {
       @include breakpoint($classname) {
-        @include -typography-text-transforms('#{$classname}-');
+        @include -typography-text-transform('#{$classname}-');
       }
     }
   } @else {
-    @include -typography-text-transforms();
+    @include -typography-text-transform();
   }
 }
