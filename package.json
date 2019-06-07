@@ -1,6 +1,6 @@
 {
     "name": "@joskoomen/scss-helpers-text-transform",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Front-end Helpers Package for text-transform css setting",
     "main": "src/_index.scss",
     "author": "Jos Koomen <hello@joskoo.men>",

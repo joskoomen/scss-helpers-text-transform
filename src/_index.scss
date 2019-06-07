@@ -4,17 +4,17 @@ $helpers-text-transform-class-prefix: 'txt-t' !default;
 
 @mixin -typography-text-transform($prefix:'') {
   .#{$prefix}#{$helpers-text-transform-class-prefix}-lc {
-    text-transform: lowercase;
+    text-transform: lowercase !important;
   }
   .#{$prefix}#{$helpers-text-transform-class-prefix}-uc {
-    text-transform: uppercase;
+    text-transform: uppercase !important;
   }
   .#{$prefix}#{$helpers-text-transform-class-prefix}-cc {
-    text-transform: capitalize;
+    text-transform: capitalize !important;
   }
   .#{$prefix}#{$helpers-text-transform-class-prefix}-fl-uc {
     &:first-letter {
-      text-transform: uppercase;
+      text-transform: uppercase !important;
     }
   }
 }
